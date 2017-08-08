@@ -11,22 +11,17 @@ public class Prob4 {
 	
 	public static char[] reverse(String str) {
 		/* 코드를 완성합니다 */
-		char[] src = str.toCharArray();
-		char[] result = new char[ src.length ];
-		result = str.toCharArray();
+		char[] re = new char[str.length()];
 		
-		int count = result.length /2;
-		for( int i = 0; i<count; i++ ){
-			char temp = result[ i ];
-			result[ i ] = result[ result.length -1 -i ];
-			result[ result.length -1 -i ] = temp;
+		for( int i=0; i<str.length(); i++ ) {
+			re[ i ] = str.charAt( str.length()-1 -i );
 		}
-		return result;}
+		return re;
+	}
 	
 	public static void printCharArray(char[] array){
 		/* 코드를 완성합니다 */
-		System.out.println( array );
-			
+		System.out.println( array );	
 	}
 	
 }

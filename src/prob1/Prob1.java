@@ -8,15 +8,18 @@ public class Prob1 {
 		
 		Scanner scanner = new Scanner( System.in );
 		
-		System.out.print( "금액" );
+		System.out.print( "금액: " );
 		int money = scanner.nextInt();
 		
-		for( int i=0; i<MONEYS.length; i++ ) {
-			int count = money/MONEYS[ i ];
-			money -= ( count*MONEYS[ i ] );
+		for( int i=0; i<MONEYS.length; i++  ) {
 			
-			System.out.println( MONEYS[ i ] + "원 : " + count + "개" );
+			int count = money / MONEYS[i];
+			money -= ( count * MONEYS[i] );
+			
+			System.out.println( MONEYS[i] + "원 : " + count );
+			
 		}
+		
 		scanner.close();
  	}
 }
